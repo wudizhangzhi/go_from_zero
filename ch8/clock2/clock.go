@@ -1,10 +1,10 @@
 package main
 
 import (
-	"fmt"
-	"net"
 	"flag"
+	"fmt"
 	"io"
+	"net"
 	"time"
 )
 
@@ -27,7 +27,6 @@ func main() {
 	}
 }
 
-
 func handleConn(c net.Conn) {
 	defer c.Close()
 	for {
@@ -35,7 +34,7 @@ func handleConn(c net.Conn) {
 		if err != nil {
 			return
 		}
-		time.Sleep(1*time.Second)
+		time.Sleep(1 * time.Second)
 	}
 
 }
