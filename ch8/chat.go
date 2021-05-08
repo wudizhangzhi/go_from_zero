@@ -17,11 +17,12 @@ var (
 
 
 func main() {
-  listener, err := net.Listen("tcp", "192.168.56.1:8000")
+  listener, err := net.Listen("tcp", ":8000")
   if err != nil {
     log.Fatal(err)
   }
   go broadcaster()
+  fmt.Println("start")
   for {
     conn, err := listener.Accept()
     if err != nil {
